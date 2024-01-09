@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import SwiftData
 
+@Model
 class Event {
     var name: String
     var location: String
@@ -16,6 +18,5 @@ class Event {
         self.name = name
         self.location = location
     }
-        
     
 }

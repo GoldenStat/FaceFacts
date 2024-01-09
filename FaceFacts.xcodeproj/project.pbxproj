@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		418A2D642B4D630C00C4DA14 /* FaceFactsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A2D632B4D630C00C4DA14 /* FaceFactsApp.swift */; };
-		418A2D662B4D630C00C4DA14 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A2D652B4D630C00C4DA14 /* Item.swift */; };
 		418A2D682B4D630C00C4DA14 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A2D672B4D630C00C4DA14 /* ContentView.swift */; };
 		418A2D6A2B4D631500C4DA14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418A2D692B4D631500C4DA14 /* Assets.xcassets */; };
 		418A2D6E2B4D631500C4DA14 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418A2D6D2B4D631500C4DA14 /* Preview Assets.xcassets */; };
+		418A2D752B4D639800C4DA14 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A2D742B4D639800C4DA14 /* Person.swift */; };
+		418A2D772B4D661400C4DA14 /* EditPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A2D762B4D661400C4DA14 /* EditPersonView.swift */; };
+		418A2D792B4D85CB00C4DA14 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A2D782B4D85CB00C4DA14 /* PeopleView.swift */; };
+		418A2D7B2B4DAEE900C4DA14 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A2D7A2B4DAEE900C4DA14 /* Event.swift */; };
+		418A2D7D2B4DB12B00C4DA14 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A2D7C2B4DB12B00C4DA14 /* EventView.swift */; };
+		418A2D7F2B4DB19A00C4DA14 /* EditEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A2D7E2B4DB19A00C4DA14 /* EditEventView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		418A2D602B4D630C00C4DA14 /* FaceFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		418A2D632B4D630C00C4DA14 /* FaceFactsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceFactsApp.swift; sourceTree = "<group>"; };
-		418A2D652B4D630C00C4DA14 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		418A2D672B4D630C00C4DA14 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		418A2D692B4D631500C4DA14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		418A2D6B2B4D631500C4DA14 /* FaceFacts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FaceFacts.entitlements; sourceTree = "<group>"; };
 		418A2D6D2B4D631500C4DA14 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		418A2D742B4D639800C4DA14 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		418A2D762B4D661400C4DA14 /* EditPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonView.swift; sourceTree = "<group>"; };
+		418A2D782B4D85CB00C4DA14 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
+		418A2D7A2B4DAEE900C4DA14 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		418A2D7C2B4DB12B00C4DA14 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		418A2D7E2B4DB19A00C4DA14 /* EditEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +64,14 @@
 		418A2D622B4D630C00C4DA14 /* FaceFacts */ = {
 			isa = PBXGroup;
 			children = (
+				418A2D7C2B4DB12B00C4DA14 /* EventView.swift */,
+				418A2D7E2B4DB19A00C4DA14 /* EditEventView.swift */,
 				418A2D632B4D630C00C4DA14 /* FaceFactsApp.swift */,
-				418A2D652B4D630C00C4DA14 /* Item.swift */,
+				418A2D7A2B4DAEE900C4DA14 /* Event.swift */,
+				418A2D742B4D639800C4DA14 /* Person.swift */,
 				418A2D672B4D630C00C4DA14 /* ContentView.swift */,
+				418A2D782B4D85CB00C4DA14 /* PeopleView.swift */,
+				418A2D762B4D661400C4DA14 /* EditPersonView.swift */,
 				418A2D692B4D631500C4DA14 /* Assets.xcassets */,
 				418A2D6B2B4D631500C4DA14 /* FaceFacts.entitlements */,
 				418A2D6C2B4D631500C4DA14 /* Preview Content */,
@@ -142,9 +157,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				418A2D662B4D630C00C4DA14 /* Item.swift in Sources */,
+				418A2D752B4D639800C4DA14 /* Person.swift in Sources */,
+				418A2D7F2B4DB19A00C4DA14 /* EditEventView.swift in Sources */,
+				418A2D7D2B4DB12B00C4DA14 /* EventView.swift in Sources */,
+				418A2D792B4D85CB00C4DA14 /* PeopleView.swift in Sources */,
 				418A2D642B4D630C00C4DA14 /* FaceFactsApp.swift in Sources */,
 				418A2D682B4D630C00C4DA14 /* ContentView.swift in Sources */,
+				418A2D7B2B4DAEE900C4DA14 /* Event.swift in Sources */,
+				418A2D772B4D661400C4DA14 /* EditPersonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,9 +291,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FaceFacts/FaceFacts.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FaceFacts/Preview Content\"";
+				DEVELOPMENT_TEAM = 2NBB26789S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -307,9 +329,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FaceFacts/FaceFacts.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FaceFacts/Preview Content\"";
+				DEVELOPMENT_TEAM = 2NBB26789S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;

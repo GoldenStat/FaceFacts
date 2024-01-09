@@ -10,53 +10,49 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    
+    @State private var path = NavigationPath()
+    @State private var searchText = ""
+    
+    @State private var sortOrder = [SortDescriptor(\Person.name)]
     
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+        NavigationStack(path: $path) {
+            PeopleView(searchString: searchText, sortOrder: sortOrder)
+                .navigationTitle("FaceFacts")
+                .navigationDestination(for: Person.self) { person in
+                    EditPersonView(person: person, navigationPath: $path)
+                }
+                .toolbar {
+                    Button("Add Person", systemImage: "plus", action: addPerson)
+                    
+                    Menu("Sort", systemImage: "arrow.up.arrow.down") {
+                        Picker("Sort", selection: $sortOrder) {
+                            Text("Name (A-Z)")
+                                .tag([SortDescriptor(\Person.name)])
+                            Text("Name (Z-A)")
+                                .tag([SortDescriptor(\Person.name, order: .reverse)])
+                            
+                        }
                     }
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-#if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-#endif
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-            Text("Select an item")
+                .searchable(text: $searchText)
+            
+            Text("Select a person")
         }
     }
 
-    private func addItem() {
+    private func addPerson() {
         withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
+            let newPerson = Person(name: "", email: "", details: "")
+            modelContext.insert(newPerson)
+            path.append(newPerson)
         }
     }
 
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
-    }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+        .modelContainer(for: Person.self, inMemory: true)
 }
